@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <VersionPrefix>1.0.0.0</VersionPrefix>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>SmartME.Tests</AssemblyName>
+    <PackageId>MyProject.Tests</PackageId>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>com.trustmechain.SmartME.Tests</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+    <PackageReference Include="Moq" Version="4.12.0" />
+    <PackageReference Include="NSubstitute" Version="4.0.0" />
+    <PackageReference Include="Shouldly" Version="3.0.2" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.extensibility.execution" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Abp.TestBase" Version="4.5.0" />
+    <PackageReference Include="Castle.Core" Version="4.4.0" />
+    <PackageReference Include="Abp.ZeroCore.EntityFrameworkCore" Version="4.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.4" />
+    <PackageReference Include="Castle.Windsor.MsDependencyInjection" Version="3.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
+    <PackageReference Include="Abp.AutoMapper" Version="4.5.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.2.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="SmartME.EntityFrameworkCore">
+      <HintPath>..\smartME_ApiBackend\src\SmartME.EntityFrameworkCore\bin\Debug\netcoreapp2.2\SmartME.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartME.Core">
+      <HintPath>..\smartME_ApiBackend\src\SmartME.Core\bin\Debug\netcoreapp2.2\SmartME.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartME.Application">
+      <HintPath>..\smartME_ApiBackend\src\SmartME.Application\bin\Debug\netcoreapp2.2\SmartME.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartME.EntityFrameworkCore">
+      <HintPath>dll\SmartME.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartME.Application">
+      <HintPath>dll\SmartME.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartME.Core">
+      <HintPath>dll\SmartME.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TrustME.Lib">
+      <HintPath>dll\TrustME.Lib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
